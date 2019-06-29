@@ -13,7 +13,7 @@ graph['n3'] = ['o'];
  * @param target 目标值
  * @return 返回搜索结果
  */
-const dfs:(name: string, target:string) => boolean = function (name, target) {
+const bfs:(name: string, target:string) => boolean = function (name, target) {
   let searched:string[] = [];
   let search_queue = graph[name] || [];
   while (search_queue.length > 0) {
@@ -30,8 +30,8 @@ const dfs:(name: string, target:string) => boolean = function (name, target) {
   return false;
 };
 
-const dfs_result = dfs('xiaochi', 'o');
-console.log(dfs_result); // true
+const bfs_result = bfs('xiaochi', 'o');
+console.log(bfs_result); // true
 
-const dfs_result_2 = dfs('xiaochi', 'x');
-console.log(dfs_result_2); // false
+const bfs_result_2 = bfs('xiaochi', 'x');
+console.log(bfs_result_2); // false
